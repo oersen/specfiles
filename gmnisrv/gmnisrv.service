@@ -1,0 +1,12 @@
+[Unit]
+Description=Gemini Server
+Documentation=man:gmnisrv(1) man:gmnisrv.ini(5)
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/gmnisrv
+
+[Install]
+WantedBy=multi-user.target
