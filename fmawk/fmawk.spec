@@ -1,9 +1,9 @@
-%global commit 494bb5755ac58ba0159c1b0fd9efe3c3c8a8ef2b
+%global commit 8b3ec96e7f57b7c9280ed23b3e589ec1c77ecef2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           fmawk
 Version:        1.3
-Release:        1.20211120git%{shortcommit}%{?dist}
+Release:        1.20220315git%{shortcommit}%{?dist}
 Summary:        File manager written in awk
 
 License:        GPLv3
@@ -39,7 +39,7 @@ fm.awk - File manager written in awk.
 %doc README.md
 
 %changelog
-* Sat Nov 20 2021 Oğuz Ersen <oguz@ersen.moe> - 1.3-1.20211120git494bb57
+* Tue Mar 15 2022 Oğuz Ersen <oguz@ersen.moe> - 1.3-1.20220315git8b3ec96
 - Rebuild for the latest git commit
 
 * Wed Nov 03 2021 Oğuz Ersen <oguz@ersen.moe> - 1.3-1
