@@ -1,9 +1,9 @@
-%global commit 8bdd7418a8717f0609a5337fe389792ea1475173
+%global commit a2b5b78051c5da30045af756aef8f52ff309fc43
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           wvkbd
 Version:        0.12
-Release:        1.20221120git%{shortcommit}%{?dist}
+Release:        1.20230215git%{shortcommit}%{?dist}
 Summary:        On-screen keyboard for wlroots
 
 License:        GPLv3 and MIT
@@ -29,6 +29,7 @@ patched to add new features.
 
 %build
 %set_build_flags
+unset LDFLAGS
 %make_build
 
 %install
@@ -41,7 +42,7 @@ patched to add new features.
 %doc README.md
 
 %changelog
-* Sun Nov 20 2022 Oğuz Ersen <oguz@ersen.moe> - 0.12-1.20221120git8bdd741
+* Wed Feb 15 2023 Oğuz Ersen <oguz@ersen.moe> - 0.12-1.20230215gita2b5b78
 - Rebuild for the latest git commit
 
 * Wed Mar 09 2022 Oğuz Ersen <oguz@ersen.moe> - 0.7-1.20220309gite5648bc
