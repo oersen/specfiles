@@ -1,9 +1,9 @@
-%global commit 9942d0bb0a5d82f7a24450b00051c1f2cc008659
+%global commit 59ad13661fa15edaf72c62218903c7817b5a3691
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           vim-apprentice
 Version:        2.0
-Release:        1.20220528git%{shortcommit}%{?dist}
+Release:        1.20230215git%{shortcommit}%{?dist}
 Summary:        A dark, low-contrast, Vim colorscheme
 
 License:        MIT
@@ -37,7 +37,7 @@ install -Dpm 0644 colors/apprentice.vim %{buildroot}%{vimfiles_root}/colors/appr
 %doc README.md
 
 %changelog
-* Sat May 28 2022 Oğuz Ersen <oguz@ersen.moe> - 2.0-1.20220528git9942d0b
+* Wed Feb 15 2023 Oğuz Ersen <oguz@ersen.moe> - 2.0-1.20230215git59ad136
 - Rebuild for the latest git commit
 
 * Mon May 03 2021 Oğuz Ersen <oguz@ersen.moe> - 0-1.20210503git3491eda
