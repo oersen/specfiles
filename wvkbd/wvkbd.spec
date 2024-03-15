@@ -1,10 +1,10 @@
-%global commit 538b48d08d58d606ae49423c664dae3f861eac9c
+%global commit bb237f5afafb7bc3fa350f1adb7ca44ac7eb6ce3
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           wvkbd
-Version:        0.14.3
-Release:        1.20240201git%{shortcommit}%{?dist}
-Summary:        On-screen keyboard for wlroots
+Version:        0.14.4
+Release:        1.20240325git%{shortcommit}%{?dist}
+Summary:        On-screen virtual keyboard for wlroots
 
 License:        GPLv3 and MIT
 URL:            https://git.sr.ht/~proycon/%{name}
@@ -42,11 +42,11 @@ unset LDFLAGS
 %doc README.md
 
 %changelog
+* Fri Mar 15 2024 Oğuz Ersen <oguz@ersen.moe> - 0.14.4-1.20240315gitbb237f5
+- Rebuild for the new version
+
 * Thu Feb 01 2024 Oğuz Ersen <oguz@ersen.moe> - 0.14-3.20240201git538b48d
 - Rebuild for the latest git commit
-
-* Tue Sep 26 2023 Oğuz Ersen <oguz@ersen.moe> - 0.14.1-1.20230926gitaaff22a
-- Rebuild for the new version
 
 * Wed Mar 09 2022 Oğuz Ersen <oguz@ersen.moe> - 0.7-1.20220309gite5648bc
 - Initial version of the package
