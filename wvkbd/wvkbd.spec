@@ -1,9 +1,9 @@
-%global commit 2f72b176cbdbf55f101330758104d652dd371a0c
+%global commit fe3257450a534fde52f46f4601c0db76f54bb4dd
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           wvkbd
-Version:        0.15
-Release:        1.20240505git%{shortcommit}%{?dist}
+Version:        0.16
+Release:        1.20240901git%{shortcommit}%{?dist}
 Summary:        On-screen virtual keyboard for wlroots
 
 License:        GPLv3 and MIT
@@ -12,8 +12,7 @@ Source0:        %{url}/archive/%{commit}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  make
-BuildRequires:  pkgconfig(cairo)
-BuildRequires:  pkgconfig(pango)
+BuildRequires:  pkgconfig(pangocairo)
 BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(xkbcommon)
 
@@ -42,7 +41,7 @@ unset LDFLAGS
 %doc README.md
 
 %changelog
-* Sun May 05 2024 Oğuz Ersen <oguz@ersen.moe> - 0.15-1.20240505git2f72b17
+* Sun Sep 01 2024 Oğuz Ersen <oguz@ersen.moe> - 0.16-1.20240901gitfe32574
 - Rebuild for the new version
 
 * Fri Apr 19 2024 Oğuz Ersen <oguz@ersen.moe> - 0.14.4-1.20240419gitba77847
