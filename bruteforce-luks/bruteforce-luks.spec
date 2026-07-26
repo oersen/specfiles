@@ -10,7 +10,7 @@ License:        GPLv3
 URL:            https://github.com/glv2/%{name}
 Source0:        %{url}/archive/%{commit}.tar.gz
 
-BuildRequires:  dh-autoreconf
+BuildRequires:  automake
 BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  pkgconfig(libcryptsetup)
