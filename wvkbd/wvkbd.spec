@@ -1,9 +1,9 @@
-%global commit bbecd996aae5a4dc4bc32bd643d37cefa9f63752
+%global commit f7e9ea3a7565decd0d120861c1cb36a7b6836244
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           wvkbd
-Version:        0.20
-Release:        1.20261005git%{shortcommit}%{?dist}
+Version:        0.21
+Release:        1.20261028git%{shortcommit}%{?dist}
 Summary:        On-screen virtual keyboard for wlroots
 
 License:        GPLv3 and MIT
@@ -42,6 +42,9 @@ unset LDFLAGS
 %doc README.md
 
 %changelog
+* Wed Oct 28 2026 Oğuz Ersen <oguz@ersen.moe> - 0.21-1.20261028gitf7e9ea3
+- Rebuild for the new version
+
 * Mon Oct 05 2026 Oğuz Ersen <oguz@ersen.moe> - 0.19.4-1.20261005gitbbecd99
 - Rebuild for the latest git commit
 
