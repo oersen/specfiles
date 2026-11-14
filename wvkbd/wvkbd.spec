@@ -1,9 +1,9 @@
-%global commit f7e9ea3a7565decd0d120861c1cb36a7b6836244
+%global commit 4ae78249f39e1c9ce67a939d338aab2ad1e3d919
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           wvkbd
 Version:        0.21
-Release:        1.20261028git%{shortcommit}%{?dist}
+Release:        1.20261117git%{shortcommit}%{?dist}
 Summary:        On-screen virtual keyboard for wlroots
 
 License:        GPLv3 and MIT
@@ -29,7 +29,9 @@ patched to add new features.
 
 %build
 %set_build_flags
-unset LDFLAGS
+CFLAGS="${CFLAGS/" -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1"/}"
+CXXFLAGS="${CXXFLAGS/" -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1"/}"
+LDFLAGS="${LDFLAGS/" -specs=/usr/lib/rpm/redhat/redhat-hardened-ld"/}"
 %make_build
 
 %install
@@ -42,13 +44,10 @@ unset LDFLAGS
 %doc README.md
 
 %changelog
-* Wed Oct 28 2026 Oğuz Ersen <oguz@ersen.moe> - 0.21-1.20261028gitf7e9ea3
-- Rebuild for the new version
-
-* Mon Oct 05 2026 Oğuz Ersen <oguz@ersen.moe> - 0.19.4-1.20261005gitbbecd99
+* Tue Nov 17 2026 Oğuz Ersen <oguz@ersen.moe> - 0.21-1.20261117git4ae7824
 - Rebuild for the latest git commit
 
-* Sat Jul 25 2026 Oğuz Ersen <oguz@ersen.moe> - 0.20-1.20260725git6b41504
+* Wed Oct 28 2026 Oğuz Ersen <oguz@ersen.moe> - 0.21-1.20261028gitf7e9ea3
 - Rebuild for the new version
 
 * Wed Mar 09 2022 Oğuz Ersen <oguz@ersen.moe> - 0.7-1.20220309gite5648bc
