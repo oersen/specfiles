@@ -3,7 +3,7 @@
 
 Name:           wvkbd
 Version:        0.21
-Release:        1.20261117git%{shortcommit}%{?dist}
+Release:        1.20261118git%{shortcommit}%{?dist}
 Summary:        On-screen virtual keyboard for wlroots
 
 License:        GPLv3 and MIT
@@ -32,18 +32,21 @@ patched to add new features.
 CFLAGS="${CFLAGS/" -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1"/}"
 CXXFLAGS="${CXXFLAGS/" -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1"/}"
 LDFLAGS="${LDFLAGS/" -specs=/usr/lib/rpm/redhat/redhat-hardened-ld"/}"
-%make_build
+%make_build LAYOUT=deskintl
 
 %install
-%make_install PREFIX=%{_prefix}
+%make_install PREFIX=%{_prefix} LAYOUT=deskintl
 
 %files
-%{_bindir}/%{name}-mobintl
+%{_bindir}/%{name}-deskintl
 %{_mandir}/man1/%{name}.1*
 %license COPYING COPYING_WESTON LICENSE
 %doc README.md
 
 %changelog
+* Web Nov 18 2026 Oğuz Ersen <oguz@ersen.moe> - 0.21-1.20261118git4ae7824
+- Change build to deskintl
+
 * Tue Nov 17 2026 Oğuz Ersen <oguz@ersen.moe> - 0.21-1.20261117git4ae7824
 - Rebuild for the latest git commit
 
